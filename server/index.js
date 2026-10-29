@@ -11,9 +11,9 @@ import paymentRouter from "./routes/payment.route.js"
 
 const app = express()
 app.use(cors({
-    origin:"https://interviewiq-vaph.onrender.com",
-    credentials:true
-}))
+    origin: "https://interviewiq-vaph.onrender.com",
+    credentials: true
+}));
 
 app.use(express.json())
 app.use(cookieParser())
