@@ -25,8 +25,12 @@ function Auth({isModel = false}) {
 
             
         } catch (error) {
-            console.log(error)
-              dispatch(setUserData(null))
+           console.error("LOGIN ERROR:", error);
+    console.error("ERROR CODE:", error.code);
+    console.error("API STATUS:", error.response?.status);
+    console.error("API RESPONSE:", error.response?.data);
+
+    dispatch(setUserData(null));
         }
     }
   return (
